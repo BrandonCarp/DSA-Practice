@@ -7,12 +7,12 @@ from typing import List
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        top_profit = 0
-        best_buy = prices[0]
+        topProfit = 0
+        bestBuy = prices[0]
         for price in prices:
-            if price - best_buy > top_profit:
-                top_profit = price - best_buy
-            if price < best_buy:
-                best_buy = price
+            if price - bestBuy > topProfit:
+                topProfit = price - bestBuy
+            if price < bestBuy:
+                bestBuy = price
 
-        return top_profit
+        return topProfit
