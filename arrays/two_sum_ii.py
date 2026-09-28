@@ -1,8 +1,8 @@
 from typing import List
 
 
-# Two pointers on sorted input — every move is a proof:
-#  the sum's verdict eliminates a whole row of pairs. O(n) time, O(1) space — the dict replaced by sortedness
+# Two pointers on sorted input 
+#   sum's verdict eliminates a whole row of pairs. O(n) time, O(1) space — the dict replaced by sortedness
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         left = 0
@@ -21,5 +21,9 @@ if __name__ == "__main__":
     sol = Solution()
     print(sol.twoSum([2,7,11,15], 9))     #(1,2)
     print(sol.twoSum([3,5,6], 9))   #(1,3)
+
+    # Time  every lap right/left move one pointer inwards, at most n-1 laps => O(n)
+
+    # Space nothing grows in two sum ii either, we are just checking the list
 
   
