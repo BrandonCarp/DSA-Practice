@@ -1,5 +1,4 @@
 # Valid Palindrome — https://leetcode.com/problems/valid-palindrome/
-# Two pointers converging; junk skipped in stride, never removed
 # Time: O(n) — each pointer crosses the string once between them
 # Space: O(n) for the lowered copy — O(1) achievable by lowering at the
 #   comparison instead; kept the copy for readability. (The trade, told.)
@@ -30,3 +29,8 @@ if __name__ == "__main__":
     print(sol.isPalindrome("race a car"))                      # False
     print(sol.isPalindrome(".,"))                              # True 
     print(sol.isPalindrome("0P"))                              # False 
+
+    # Time - left / right start at n-1 apart. every lap the pointers (left/right) move inward
+    # Time - even the non .isalnum() push the pointers forward.
+    # unless during the "budget" the str returns false
+    # Space - s.lower returns back a new 10,000 character string, so there is growth
